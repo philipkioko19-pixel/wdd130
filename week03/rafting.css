@@ -1,0 +1,138 @@
+/* ===== 1. Custom Color & Font Variables ===== */
+:root {
+    --primary-color: #0F4C81;    /* Deep trust blue */
+    --secondary-color: #FFB703;  /* Bright accent gold */
+    --accent1-color: #90E0EF;    /* Light sky blue */
+    --accent2-color: #FFFFFF;    /* White */
+
+    --heading-font: 'Arial', Helvetica, sans-serif;
+    --body-font: 'Georgia', 'Times New Roman', serif;
+}
+
+/* ===== 2. Reset Default Browser Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== 3. Base Body Styles ===== */
+body {
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    background-color: var(--accent2-color);
+}
+
+/* ===== 4. Page Width & Centering ===== */
+header, main, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* ===== 5. Header & Navigation ===== */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+}
+
+nav a {
+    color: var(--accent2-color);
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* ===== 6. Heading Styles ===== */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ===== 7. Consistent Content Spacing ===== */
+nav, p, section, article {
+    margin: 16px;
+    padding: 16px;
+}
+
+/* ===== 8. Hero Section & Overlay Rules ===== */
+/* Make hero the positioning parent */
+.hero {
+    position: relative;
+}
+
+/* Hero image fills full width */
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Absolute positioned page title */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #ffffff;
+}
+
+/* Absolute positioned article box */
+.hero article {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+/* Floated small client image */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin: 0 0 15px 15px;
+    border-radius: 4px;
+}
+
+/* ===== 9. Footer & Social Media ===== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    margin-top: 2rem;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+}
